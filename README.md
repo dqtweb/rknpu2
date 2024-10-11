@@ -1,3 +1,21 @@
+# HƯỚNG DẪN SỬ DỤNG
+- Clone repo này về
+- Vào đây để build:
+```sh
+# Clone repo về máy. VD tại đây /home/orangepi/
+/home/orangepi/ && git clone git@github.com:dqtweb/rknpu2.git
+
+# Build thư viện và cài đặt:
+cd /home/orangepi/rknpu2/examples/rknn_api_demo
+sh build-linux_RK3588.sh
+cp install/rknn_api_demo_Linux/lib/*.so /usr/lib
+
+# Build example:
+cd /home/orangepi/rknpu2/examples/rknn_yolov5_demo
+sh build-linux_RK3588.sh
+./rknn_yolov5_demo model/RK3588/yolov5s-640-640.rknn model/bus.jpg
+```
+
 # NOTE
 
 This project is no longer maintained and has been moved to https://github.com/airockchip/rknn-toolkit2/tree/master/rknpu2
